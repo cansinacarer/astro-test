@@ -3,6 +3,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://cansinacarer.github.io",
-	base: "/astro-test",
+	site: "https://astro-test.cansin.net",
+	base: "/",
 });
