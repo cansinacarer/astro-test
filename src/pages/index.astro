@@ -1,13 +1,107 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/Navigation.astro";
+
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Navigation />
-	<p>index content</p>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<h1 class="text-3xl font-bold my-4">Home</h1>
+	</div>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<p>index contesnt</p>
+	</div>
+
+	<div
+		class="mx-auto h-36 my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<button
+			class="btn btn-primary mx-auto"
+			onclick="my_modal_1.showModal()"
+		>
+			open modal
+		</button>
+		<dialog id="my_modal_1" class="modal">
+			<div class="modal-box">
+				<h3 class="text-lg font-bold">Hello!</h3>
+				<p class="py-4">
+					Press ESC key or click the button below to close
+				</p>
+				<div class="modal-action">
+					<form method="dialog">
+						<!-- if there is a button in form, it will close the modal -->
+						<button class="btn">Close</button>
+					</form>
+				</div>
+			</div>
+		</dialog>
+	</div>
+
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<div class="join join-vertical mx-auto">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller join-item"
+				aria-label="Default"
+				value="default"
+				data-set-theme="default"
+				checked
+			/>
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller join-item"
+				aria-label="Retro"
+				value="retro"
+				data-set-theme="retro"
+			/>
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller join-item"
+				aria-label="Cyberpunk"
+				value="cyberpunk"
+				data-set-theme="cyberpunk"
+			/>
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller join-item"
+				aria-label="Valentine"
+				value="valentine"
+				data-set-theme="valentine"
+			/>
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller join-item"
+				aria-label="Aqua"
+				value="aqua"
+				data-set-theme="aqua"
+			/>
+		</div>
+	</div>
+
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<input type="checkbox" value="aqua" class="toggle theme-controller" />
+	</div>
+
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<div class="badge badge-primary">Primary Badge</div>
+		<div class="badge badge-secondary">Secondary Badge</div>
+	</div>
 </Layout>

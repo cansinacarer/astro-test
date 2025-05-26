@@ -2,39 +2,39 @@
 const pageTitle = "About Me";
 
 const identity = {
-	firstName: "Sarah",
+	firstName: "Cansin",
 	country: "Canada",
-	occupation: "Technical Writer",
+	occupation: "Busy Bee",
 	hobbies: ["photography", "birdwatching", "baseball"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
-import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
 
 import "./src/styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{pageTitle} - Astro Tutorial</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>{pageTitle}</h1>
-
+<Layout>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
 		<p>
 			I am working through Astro's introductory tutorial. This is the
 			second page on my website, and it's the first one I built myself!
 		</p>
-
+	</div>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
 		<p>
 			This site will update as I complete more of the tutorial, so keep
 			checking back and see how my journey is going!
 		</p>
-
+	</div>
+	<div
+		class="mx-auto my-4 flex flex-col max-w-lg gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
 		<p>Here are a few facts about me:</p>
 		<ul>
 			<li>My name is {identity.firstName}.</li>
@@ -56,5 +56,5 @@ import "./src/styles/global.css";
 		<ul>
 			{skills.map((skill) => <li>{skill}</li>)}
 		</ul>
-	</body>
-</html>
+	</div>
+</Layout>

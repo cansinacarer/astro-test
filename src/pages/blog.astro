@@ -1,22 +1,20 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Navigation />
-
-		<h1>My Astro Learning Blog</h1>
-		<p>This is where I will post about my journey learning Astro.</p>
+<Layout>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
+		<h1 class="text-3xl font-bold my-4">My Astro Learning Blog</h1>
+	</div>
+	<div
+		class="mx-auto my-4 flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+	>
 		<ul>
-			<li><a href="/posts/post-0/">Post 0</a></li>
-			<li><a href="/posts/post-1/">Post 1</a></li>
-			<li><a href="/posts/post-2/">Post 2</a></li>
+			<li><a href="/posts/post-0/" class="link">Post 0</a></li>
+			<li><a href="/posts/post-1/" class="link">Post 1</a></li>
+			<li><a href="/posts/post-2/" class="link">Post 2</a></li>
 		</ul>
-	</body>
-</html>
+	</div>
+</Layout>
