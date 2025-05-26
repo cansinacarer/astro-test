@@ -1,6 +1,6 @@
 ---
 title: FM title
-layout: ../layouts/Layout.astro
+# layout: ../../layouts/Layout.astro
 ---
 
 # Test title
